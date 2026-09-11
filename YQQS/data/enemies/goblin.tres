@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/enemy_data.gd" id="1_4y8k2"]
+
+[resource]
+script = ExtResource("1_4y8k2")
+id = &"goblin"
+display_name = "哥布林剑士"
+description = "会先蓄力再直线冲锋，冲锋前会发抖。"
+sheet_key = "goblin"
+body_radius = 6.5
+max_hp = 30.0
+move_speed = 42.0
+contact_damage = 0.0
+attack_damage = 7.0
+behavior = &"charger"
+detect_radius = 170.0
+lose_radius = 374.00000000000006
+attack_range = 22.0
+projectile_speed = 140.0
+xp_reward = 10
+gold_min = 2
+gold_max = 5
+chest_drop_chance = 0.4
+sfx_hurt = "res://assets/audio/sfx/hurt.wav"
+sfx_attack = "res://assets/audio/sfx/enemy_attack.wav"
+sfx_die = "res://assets/audio/sfx/enemy_die.wav"

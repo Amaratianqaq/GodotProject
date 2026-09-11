@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ProjectileData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/projectile_data.gd" id="1_gskor"]
+
+[resource]
+script = ExtResource("1_gskor")
+id = &"cherry_petal"
+speed = 215.0
+lifetime = 0.62
+max_bounces = 1
+bounce_damping = 0.88
+bounce_damage_keep = 0.75
+color = Color(0.9490196, 0.56078434, 0.7882353, 1)
+trail_length = 5
+trail_color = Color(0.9764706, 0.78431374, 0.89411765, 1)
+hit_vfx = &"petal"

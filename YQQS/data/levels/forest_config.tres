@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="ForestMapConfig" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/forest_map_config.gd" id="1_e7ygx"]
+
+[resource]
+script = ExtResource("1_e7ygx")
+rock_density = 0.03

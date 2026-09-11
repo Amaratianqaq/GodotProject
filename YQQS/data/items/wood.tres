@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/item_data.gd" id="1_pkq13"]
+
+[resource]
+script = ExtResource("1_pkq13")
+id = &"wood"
+display_name = "木材"
+description = "森林里随处可见的木料，可用于后续合成系统。"
+icon_sheet = "props"
+icon_cell = Vector2i(3, 7)
+max_stack = 99
+sell_price = 2
+tags = PackedStringArray()

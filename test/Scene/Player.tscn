@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://c8oarvq3nfw2r"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bjqgx"]
+
+[node name="Player" type="CharacterBody2D" unique_id=638682909]
+
+[node name="ArmedEffectSprite" type="AnimatedSprite2D" parent="." unique_id=1953295770]
+
+[node name="BodySprite" type="AnimatedSprite2D" parent="." unique_id=971119070]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1870836967]
+shape = SubResource("CapsuleShape2D_bjqgx")

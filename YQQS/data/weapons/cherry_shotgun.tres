@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/weapon_data.gd" id="1_rnf0r"]
+
+[resource]
+script = ExtResource("1_rnf0r")
+kind = 3
+damage = 4.5
+energy_cost = 4.0
+fire_rate = 0.62
+magazine = 6
+reload_time = 1.5
+projectile_count = 5
+spread_deg = 34.0
+bullet_speed = 215.0
+bullet_lifetime = 0.62
+knockback = 34.0
+crit_bonus = 0.05
+script_path = "res://scripts/weapons/cherry_shotgun.gd"
+sfx_fire = "res://assets/audio/sfx/shotgun.wav"
+muzzle_offset = Vector2(13, 0)
+shake_on_fire = 1.4
+flavor_text = "「花瓣落尽之时，森林归于寂静。」—— 森林射手路线的终点"
+id = &"cherry_shotgun"
+display_name = "樱花霰弹枪"
+description = "复刻《元气骑士》樱花霰弹枪。
+一次射出 5 枚樱花瓣弹丸，花瓣会在墙上弹一次；
+贴脸时五瓣全中，是全游戏爆发最高的武器。"
+item_type = 0
+rarity = 3
+sell_price = 320
+tags = PackedStringArray("shotgun", "petal", "cherry", "boss_reward")

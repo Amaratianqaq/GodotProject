@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="LootTable" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/loot_entry.gd" id="1_gsm8q"]
+[ext_resource type="Script" path="res://scripts/data/loot_table.gd" id="2_llfwv"]
+
+[sub_resource type="Resource" id="Resource_img6i"]
+script = ExtResource("1_gsm8q")
+item_id = &"hp_potion_large"
+weight = 30.0
+count_max = 2
+require_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_6rtpm"]
+script = ExtResource("1_gsm8q")
+item_id = &"mp_potion_large"
+weight = 26.0
+count_max = 2
+require_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_rq0hs"]
+script = ExtResource("1_gsm8q")
+item_id = &"relic_shard"
+weight = 26.0
+count_max = 2
+require_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_xvf0x"]
+script = ExtResource("1_gsm8q")
+item_id = &"elixir_life"
+weight = 12.0
+require_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_xaxik"]
+script = ExtResource("1_gsm8q")
+item_id = &"forest_key"
+weight = 10.0
+require_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_y57s6"]
+script = ExtResource("1_gsm8q")
+item_id = &"forest_key"
+require_tags = PackedStringArray()
+
+[resource]
+script = ExtResource("2_llfwv")
+id = &"chest_rare"
+display_name = "稀有宝箱"
+roll_count = 3
+min_results = 3
+max_results = 7
+guaranteed = Array[ExtResource("1_gsm8q")]([SubResource("Resource_y57s6")])
+guaranteed_chances = Array[float]([0.35])
+entries = Array[ExtResource("1_gsm8q")]([SubResource("Resource_img6i"), SubResource("Resource_6rtpm"), SubResource("Resource_rq0hs"), SubResource("Resource_xvf0x"), SubResource("Resource_xaxik")])
+gold_min = 60
+gold_max = 120
+weapon_drop_chance = 1.0
+weapon_count_range = Vector2i(2, 3)
+weapon_rarity_weights = Array[float]([0.0, 0.0, 80.0, 20.0])

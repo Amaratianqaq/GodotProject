@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/items/item_pickup.gd" id="1_item"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_item"]
+radius = 7.0
+
+[node name="ItemPickup" type="Area2D"]
+collision_layer = 256
+collision_mask = 0
+script = ExtResource("1_item")
+magnet_radius = 0.0
+collect_distance = 8.0
+pop_speed = 36.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_item")

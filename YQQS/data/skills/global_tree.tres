@@ -1,0 +1,423 @@
+[gd_resource type="Resource" script_class="SkillTreeData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/skill_node_data.gd" id="1_02qel"]
+[ext_resource type="Script" path="res://scripts/data/stat_effect.gd" id="2_1j8kt"]
+[ext_resource type="Script" path="res://scripts/data/skill_tree_data.gd" id="3_pqtpn"]
+
+[sub_resource type="Resource" id="Resource_56605"]
+script = ExtResource("2_1j8kt")
+stat = 15
+per_level = 2.5
+
+[sub_resource type="Resource" id="Resource_a7dfm"]
+script = ExtResource("2_1j8kt")
+stat = 12
+per_level = 20.0
+
+[sub_resource type="Resource" id="Resource_p7o1o"]
+script = ExtResource("1_02qel")
+id = &"f_keystone"
+display_name = "贪婪之心"
+description = "幸运 +2.5，拾取范围 +20"
+icon_id = "magnet"
+branch = &"fortune"
+grid_position = Vector2i(0, 1)
+prerequisites = Array[StringName]([&"f_luck1"])
+prerequisite_levels = Array[int]([3])
+effects = Array[ExtResource("2_1j8kt")]([SubResource("Resource_56605"), SubResource("Resource_a7dfm")])
+granted_tags = PackedStringArray()
+is_keystone = true
+
+[sub_resource type="Resource" id="Resource_jmi2b"]
+script = ExtResource("1_02qel")
+id = &"f_cherry"
+display_name = "樱花精通"
+description = "樱花霰弹枪：每发多射 1 枚花瓣，且散布收紧 20%"
+icon_id = "magnet"
+branch = &"fortune"
+grid_position = Vector2i(1, 1)
+prerequisites = Array[StringName]([&"f_luck1"])
+prerequisite_levels = Array[int]([2])
+granted_tags = PackedStringArray("cherry_mastery")
+is_keystone = true
+
+[sub_resource type="Resource" id="Resource_56q5i"]
+script = ExtResource("2_1j8kt")
+stat = 2
+per_level = 12.0
+
+[sub_resource type="Resource" id="Resource_o1iqr"]
+script = ExtResource("2_1j8kt")
+stat = 10
+per_level = 0.9
+
+[sub_resource type="Resource" id="Resource_4ntex"]
+script = ExtResource("1_02qel")
+id = &"f_mp"
+display_name = "能量涌动"
+description = "能量上限 +12 / 级，能量回复 +0.9/s / 级"
+icon_id = "magnet"
+branch = &"fortune"
+grid_position = Vector2i(0, 2)
+max_level = 3
+effects = Array[ExtResource("2_1j8kt")]([SubResource("Resource_56q5i"), SubResource("Resource_o1iqr")])
+granted_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_8p2q3"]
+script = ExtResource("2_1j8kt")
+stat = 11
+per_level = 0.6
+
+[sub_resource type="Resource" id="Resource_g2gsu"]
+script = ExtResource("1_02qel")
+id = &"v_regen"
+display_name = "再生之息"
+description = "每秒回复 0.6 生命 / 级"
+icon_id = "vitality"
+branch = &"vitality"
+grid_position = Vector2i(1, 2)
+prerequisites = Array[StringName]([&"v_hp2"])
+prerequisite_levels = Array[int]([2])
+max_level = 2
+effects = Array[ExtResource("2_1j8kt")]([SubResource("Resource_8p2q3")])
+granted_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_yhqua"]
+script = ExtResource("2_1j8kt")
+stat = 5
+per_level = 3.0
+
+[sub_resource type="Resource" id="Resource_ve46m"]
+script = ExtResource("1_02qel")
+id = &"o_melee"
+display_name = "手刀专精"
+description = "徒手伤害 +3 / 级"
+icon_id = "precision"
+branch = &"offense"
+grid_position = Vector2i(3, 2)
+prerequisites = Array[StringName]([&"o_dmg2"])
+prerequisite_levels = Array[int]([2])
+max_level = 3
+effects = Array[ExtResource("2_1j8kt")]([SubResource("Resource_yhqua")])
+granted_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_ng1ft"]
+script = ExtResource("2_1j8kt")
+stat = 4
+per_level = 0.15
+is_mult = true
+
+[sub_resource type="Resource" id="Resource_gpqyw"]
+script = ExtResource("2_1j8kt")
+stat = 6
+per_level = 0.05
+
+[sub_resource type="Resource" id="Resource_vu0el"]
+script = ExtResource("1_02qel")
+id = &"o_keystone"
+display_name = "狂怒之心"
+description = "全部伤害 +15%，暴击率 +5%"
+icon_id = "crit"
+branch = &"offense"
+grid_position = Vector2i(4, 2)
+prerequisites = Array[StringName]([&"o_crit2", &"o_dmg2"])
+prerequisite_levels = Array[int]([2, 2])
+effects = Array[ExtResource("2_1j8kt")]([SubResource("Resource_ng1ft"), SubResource("Resource_gpqyw")])
+granted_tags = PackedStringArray()
+is_keystone = true
+
+[sub_resource type="Resource" id="Resource_0wk6r"]
+script = ExtResource("2_1j8kt")
+stat = 8
+per_level = 0.08
+is_mult = true
+
+[sub_resource type="Resource" id="Resource_qndkx"]
+script = ExtResource("1_02qel")
+id = &"m_fire"
+display_name = "急速射击"
+description = "射速 +8% / 级"
+icon_id = "swift"
+branch = &"mobility"
+grid_position = Vector2i(5, 2)
+prerequisites = Array[StringName]([&"m_reload"])
+prerequisite_levels = Array[int]([2])
+max_level = 3
+effects = Array[ExtResource("2_1j8kt")]([SubResource("Resource_0wk6r")])
+granted_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_rciyx"]
+script = ExtResource("1_02qel")
+id = &"m_keystone"
+display_name = "双翻滚"
+description = "翻滚可以连续使用两次（充能 +1）"
+branch = &"mobility"
+grid_position = Vector2i(6, 2)
+prerequisites = Array[StringName]([&"m_roll1"])
+prerequisite_levels = Array[int]([3])
+granted_tags = PackedStringArray("double_roll")
+is_keystone = true
+
+[sub_resource type="Resource" id="Resource_f4x7a"]
+script = ExtResource("2_1j8kt")
+stat = 12
+per_level = 14.0
+
+[sub_resource type="Resource" id="Resource_6ueyx"]
+script = ExtResource("1_02qel")
+id = &"f_pickup"
+display_name = "磁力吸附"
+description = "拾取范围 +14 / 级"
+icon_id = "magnet"
+branch = &"fortune"
+grid_position = Vector2i(0, 3)
+prerequisites = Array[StringName]([&"f_luck1"])
+prerequisite_levels = Array[int]([1])
+max_level = 2
+effects = Array[ExtResource("2_1j8kt")]([SubResource("Resource_f4x7a")])
+granted_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_itfrn"]
+script = ExtResource("2_1j8kt")
+per_level = 14.0
+
+[sub_resource type="Resource" id="Resource_o15oc"]
+script = ExtResource("1_02qel")
+id = &"v_hp2"
+display_name = "生命涌动"
+description = "生命上限 +14 / 级"
+icon_id = "vitality"
+branch = &"vitality"
+grid_position = Vector2i(1, 3)
+prerequisites = Array[StringName]([&"v_hp1"])
+prerequisite_levels = Array[int]([2])
+max_level = 3
+effects = Array[ExtResource("2_1j8kt")]([SubResource("Resource_itfrn")])
+granted_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_e57hp"]
+script = ExtResource("2_1j8kt")
+stat = 17
+per_level = 1.6
+
+[sub_resource type="Resource" id="Resource_y3ylq"]
+script = ExtResource("2_1j8kt")
+stat = 16
+per_level = -0.25
+
+[sub_resource type="Resource" id="Resource_t2wbk"]
+script = ExtResource("1_02qel")
+id = &"v_armor2"
+display_name = "护甲强化"
+description = "护甲回复速度 +1.6/级，回复延迟 -0.25s/级"
+icon_id = "vitality"
+branch = &"vitality"
+grid_position = Vector2i(2, 3)
+prerequisites = Array[StringName]([&"v_armor1"])
+prerequisite_levels = Array[int]([2])
+max_level = 3
+effects = Array[ExtResource("2_1j8kt")]([SubResource("Resource_e57hp"), SubResource("Resource_y3ylq")])
+granted_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_ba1an"]
+script = ExtResource("2_1j8kt")
+stat = 4
+per_level = 0.07
+is_mult = true
+
+[sub_resource type="Resource" id="Resource_6vpy4"]
+script = ExtResource("1_02qel")
+id = &"o_dmg2"
+display_name = "战意"
+description = "全部伤害 +7% / 级"
+icon_id = "precision"
+branch = &"offense"
+grid_position = Vector2i(3, 3)
+prerequisites = Array[StringName]([&"o_dmg1"])
+prerequisite_levels = Array[int]([2])
+max_level = 3
+effects = Array[ExtResource("2_1j8kt")]([SubResource("Resource_ba1an")])
+granted_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_kb1yh"]
+script = ExtResource("2_1j8kt")
+stat = 7
+per_level = 0.18
+
+[sub_resource type="Resource" id="Resource_8a5e6"]
+script = ExtResource("1_02qel")
+id = &"o_crit2"
+display_name = "致命一击"
+description = "暴击伤害 +18% / 级"
+icon_id = "precision"
+branch = &"offense"
+grid_position = Vector2i(4, 3)
+prerequisites = Array[StringName]([&"o_crit1"])
+prerequisite_levels = Array[int]([2])
+max_level = 3
+effects = Array[ExtResource("2_1j8kt")]([SubResource("Resource_kb1yh")])
+granted_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_rgpwd"]
+script = ExtResource("2_1j8kt")
+stat = 9
+per_level = 0.1
+is_mult = true
+
+[sub_resource type="Resource" id="Resource_s2q0b"]
+script = ExtResource("1_02qel")
+id = &"m_reload"
+display_name = "快速换弹"
+description = "换弹速度 +10% / 级"
+icon_id = "swift"
+branch = &"mobility"
+grid_position = Vector2i(5, 3)
+max_level = 3
+effects = Array[ExtResource("2_1j8kt")]([SubResource("Resource_rgpwd")])
+granted_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_881ht"]
+script = ExtResource("2_1j8kt")
+stat = 14
+per_level = 12.0
+
+[sub_resource type="Resource" id="Resource_otb20"]
+script = ExtResource("1_02qel")
+id = &"m_roll2"
+display_name = "翻滚距离"
+description = "翻滚距离 +12 像素 / 级"
+icon_id = "swift"
+branch = &"mobility"
+grid_position = Vector2i(6, 3)
+prerequisites = Array[StringName]([&"m_roll1"])
+prerequisite_levels = Array[int]([1])
+max_level = 2
+effects = Array[ExtResource("2_1j8kt")]([SubResource("Resource_881ht")])
+granted_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_ho0ov"]
+script = ExtResource("2_1j8kt")
+stat = 15
+per_level = 0.8
+
+[sub_resource type="Resource" id="Resource_4hb6g"]
+script = ExtResource("1_02qel")
+id = &"f_luck1"
+display_name = "幸运"
+description = "幸运 +0.8 / 级（提高高品质掉落概率）"
+icon_id = "magnet"
+branch = &"fortune"
+grid_position = Vector2i(0, 4)
+max_level = 3
+effects = Array[ExtResource("2_1j8kt")]([SubResource("Resource_ho0ov")])
+granted_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_yvhbg"]
+script = ExtResource("2_1j8kt")
+per_level = 8.0
+
+[sub_resource type="Resource" id="Resource_2re2x"]
+script = ExtResource("1_02qel")
+id = &"v_hp1"
+display_name = "强健体魄"
+description = "生命上限 +8 / 级"
+icon_id = "vitality"
+branch = &"vitality"
+grid_position = Vector2i(1, 4)
+max_level = 3
+effects = Array[ExtResource("2_1j8kt")]([SubResource("Resource_yvhbg")])
+granted_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_k5u5r"]
+script = ExtResource("2_1j8kt")
+stat = 1
+per_level = 6.0
+
+[sub_resource type="Resource" id="Resource_qr2p2"]
+script = ExtResource("1_02qel")
+id = &"v_armor1"
+display_name = "铁壁"
+description = "护甲上限 +6 / 级"
+icon_id = "vitality"
+branch = &"vitality"
+grid_position = Vector2i(2, 4)
+max_level = 3
+effects = Array[ExtResource("2_1j8kt")]([SubResource("Resource_k5u5r")])
+granted_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_so1xu"]
+script = ExtResource("2_1j8kt")
+stat = 4
+per_level = 0.05
+is_mult = true
+
+[sub_resource type="Resource" id="Resource_x6phg"]
+script = ExtResource("1_02qel")
+id = &"o_dmg1"
+display_name = "锋利"
+description = "全部伤害 +5% / 级"
+icon_id = "precision"
+branch = &"offense"
+grid_position = Vector2i(3, 4)
+max_level = 3
+effects = Array[ExtResource("2_1j8kt")]([SubResource("Resource_so1xu")])
+granted_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_aqu2p"]
+script = ExtResource("2_1j8kt")
+stat = 6
+per_level = 0.03
+
+[sub_resource type="Resource" id="Resource_ub7ac"]
+script = ExtResource("1_02qel")
+id = &"o_crit1"
+display_name = "精准打击"
+description = "暴击率 +3% / 级"
+icon_id = "precision"
+branch = &"offense"
+grid_position = Vector2i(4, 4)
+max_level = 3
+effects = Array[ExtResource("2_1j8kt")]([SubResource("Resource_aqu2p")])
+granted_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_je1rd"]
+script = ExtResource("2_1j8kt")
+stat = 3
+per_level = 4.0
+
+[sub_resource type="Resource" id="Resource_u7hrp"]
+script = ExtResource("1_02qel")
+id = &"m_speed1"
+display_name = "疾风步"
+description = "移动速度 +4 / 级"
+icon_id = "swift"
+branch = &"mobility"
+grid_position = Vector2i(5, 4)
+max_level = 3
+effects = Array[ExtResource("2_1j8kt")]([SubResource("Resource_je1rd")])
+granted_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_ln63k"]
+script = ExtResource("2_1j8kt")
+stat = 13
+per_level = -0.1
+is_mult = true
+
+[sub_resource type="Resource" id="Resource_a1xix"]
+script = ExtResource("1_02qel")
+id = &"m_roll1"
+display_name = "翻滚精通"
+description = "翻滚冷却 -10% / 级"
+icon_id = "swift"
+branch = &"mobility"
+grid_position = Vector2i(6, 4)
+max_level = 3
+effects = Array[ExtResource("2_1j8kt")]([SubResource("Resource_ln63k")])
+granted_tags = PackedStringArray()
+
+[resource]
+script = ExtResource("3_pqtpn")
+description = "跨角色、跨关卡、跨存档保留的通用成长树。
+每升一级获得 1 点技能点。四条分支：生存 / 进攻 / 敏捷 / 幸运。"
+nodes = Array[ExtResource("1_02qel")]([SubResource("Resource_p7o1o"), SubResource("Resource_jmi2b"), SubResource("Resource_4ntex"), SubResource("Resource_g2gsu"), SubResource("Resource_ve46m"), SubResource("Resource_vu0el"), SubResource("Resource_qndkx"), SubResource("Resource_rciyx"), SubResource("Resource_6ueyx"), SubResource("Resource_o15oc"), SubResource("Resource_t2wbk"), SubResource("Resource_6vpy4"), SubResource("Resource_8a5e6"), SubResource("Resource_s2q0b"), SubResource("Resource_otb20"), SubResource("Resource_4hb6g"), SubResource("Resource_2re2x"), SubResource("Resource_qr2p2"), SubResource("Resource_x6phg"), SubResource("Resource_ub7ac"), SubResource("Resource_u7hrp"), SubResource("Resource_a1xix")])
+grid_size = Vector2i(7, 5)

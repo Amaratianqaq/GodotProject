@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/item_data.gd" id="1_3xvvq"]
+
+[resource]
+script = ExtResource("1_3xvvq")
+id = &"slime_gel"
+display_name = "史莱姆凝胶"
+description = "史莱姆体内凝结的胶质，黏糊糊的。"
+icon_sheet = "props"
+icon_cell = Vector2i(5, 7)
+max_stack = 99
+sell_price = 3
+tags = PackedStringArray()

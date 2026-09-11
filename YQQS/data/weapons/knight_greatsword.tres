@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/weapon_data.gd" id="1_mb6i4"]
+
+[resource]
+script = ExtResource("1_mb6i4")
+kind = 1
+damage = 16.0
+fire_rate = 0.48
+knockback = 100.0
+melee_arc_deg = 115.0
+melee_range = 26.0
+id = &"knight_greatsword"
+display_name = "骑士重剑"
+description = "王国骑士制式重剑，剑身刻着家徽。"
+item_type = 0
+rarity = 2
+sell_price = 76
+tags = PackedStringArray()

@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="LootTable" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/loot_entry.gd" id="1_6kyb2"]
+[ext_resource type="Script" path="res://scripts/data/loot_table.gd" id="2_2mtxp"]
+
+[sub_resource type="Resource" id="Resource_2gv7q"]
+script = ExtResource("1_6kyb2")
+item_id = &"slime_gel"
+weight = 30.0
+require_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_ycemc"]
+script = ExtResource("1_6kyb2")
+item_id = &"wood"
+weight = 26.0
+count_max = 2
+require_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_bnq3m"]
+script = ExtResource("1_6kyb2")
+item_id = &"hp_potion_small"
+weight = 20.0
+require_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_5s8fn"]
+script = ExtResource("1_6kyb2")
+item_id = &"mp_potion_small"
+weight = 16.0
+require_tags = PackedStringArray()
+
+[resource]
+script = ExtResource("2_2mtxp")
+id = &"enemy_normal"
+display_name = "小怪掉落"
+empty_weight = 68.0
+entries = Array[ExtResource("1_6kyb2")]([SubResource("Resource_2gv7q"), SubResource("Resource_ycemc"), SubResource("Resource_bnq3m"), SubResource("Resource_5s8fn")])
+weapon_drop_chance = 0.05
+weapon_rarity_weights = Array[float]([80.0, 20.0, 0.0, 0.0])

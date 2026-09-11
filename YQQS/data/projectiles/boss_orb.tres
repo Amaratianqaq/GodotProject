@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ProjectileData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/projectile_data.gd" id="1_txhls"]
+
+[resource]
+script = ExtResource("1_txhls")
+id = &"boss_orb"
+speed = 135.0
+lifetime = 2.2
+radius = 4.5
+color = Color(0.7058824, 0.2901961, 0.7882353, 1)
+trail_length = 5
+trail_color = Color(0.7058824, 0.2901961, 0.7882353, 1)

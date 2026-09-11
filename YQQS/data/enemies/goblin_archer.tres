@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/enemy_data.gd" id="1_vk6wp"]
+
+[resource]
+script = ExtResource("1_vk6wp")
+id = &"goblin_archer"
+display_name = "哥布林弓手"
+description = "保持距离放箭，靠近它反而会后退。"
+sheet_key = "goblin_archer"
+body_radius = 6.0
+max_hp = 22.0
+move_speed = 38.0
+contact_damage = 0.0
+attack_damage = 6.0
+behavior = &"ranged_kiter"
+detect_radius = 200.0
+lose_radius = 440.00000000000006
+attack_range = 120.0
+projectile_speed = 150.0
+xp_reward = 10
+gold_min = 2
+gold_max = 5
+chest_drop_chance = 0.4
+sfx_hurt = "res://assets/audio/sfx/hurt.wav"
+sfx_attack = "res://assets/audio/sfx/enemy_attack.wav"
+sfx_die = "res://assets/audio/sfx/enemy_die.wav"

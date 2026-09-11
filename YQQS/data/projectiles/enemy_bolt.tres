@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ProjectileData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/projectile_data.gd" id="1_cfjmt"]
+
+[resource]
+script = ExtResource("1_cfjmt")
+id = &"enemy_bolt"
+speed = 150.0
+lifetime = 1.9
+radius = 3.5
+color = Color(0.8509804, 0.2901961, 0.2901961, 1)
+trail_length = 3
+trail_color = Color(0.8509804, 0.2901961, 0.2901961, 1)

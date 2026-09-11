@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="LootTable" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/loot_entry.gd" id="1_tsb8h"]
+[ext_resource type="Script" path="res://scripts/data/loot_table.gd" id="2_vvaio"]
+
+[sub_resource type="Resource" id="Resource_jylid"]
+script = ExtResource("1_tsb8h")
+item_id = &"hp_potion_small"
+weight = 34.0
+require_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_06g52"]
+script = ExtResource("1_tsb8h")
+item_id = &"mp_potion_small"
+weight = 28.0
+require_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_7ca87"]
+script = ExtResource("1_tsb8h")
+item_id = &"slime_gel"
+weight = 26.0
+count_max = 3
+require_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_y3ldm"]
+script = ExtResource("1_tsb8h")
+item_id = &"wood"
+weight = 22.0
+count_max = 3
+require_tags = PackedStringArray()
+
+[resource]
+script = ExtResource("2_vvaio")
+id = &"chest_normal"
+display_name = "普通宝箱"
+roll_count = 2
+empty_weight = 15.0
+min_results = 1
+max_results = 4
+entries = Array[ExtResource("1_tsb8h")]([SubResource("Resource_jylid"), SubResource("Resource_06g52"), SubResource("Resource_7ca87"), SubResource("Resource_y3ldm")])
+gold_min = 3
+gold_max = 10
+weapon_drop_chance = 0.6

@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="LootTable" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/loot_entry.gd" id="1_qxfo8"]
+[ext_resource type="Script" path="res://scripts/data/loot_table.gd" id="2_inoih"]
+
+[sub_resource type="Resource" id="Resource_s24j2"]
+script = ExtResource("1_qxfo8")
+item_id = &"goblin_fang"
+weight = 30.0
+count_max = 2
+require_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_qrfuf"]
+script = ExtResource("1_qxfo8")
+item_id = &"hp_potion_large"
+weight = 24.0
+require_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_my3jx"]
+script = ExtResource("1_qxfo8")
+item_id = &"mp_potion_large"
+weight = 20.0
+require_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_ryp2e"]
+script = ExtResource("1_qxfo8")
+item_id = &"ancient_scroll"
+weight = 14.0
+require_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_dvkqq"]
+script = ExtResource("1_qxfo8")
+item_id = &"relic_shard"
+weight = 12.0
+require_tags = PackedStringArray()
+
+[resource]
+script = ExtResource("2_inoih")
+id = &"enemy_elite"
+display_name = "精英掉落"
+roll_count = 2
+empty_weight = 22.0
+entries = Array[ExtResource("1_qxfo8")]([SubResource("Resource_s24j2"), SubResource("Resource_qrfuf"), SubResource("Resource_my3jx"), SubResource("Resource_ryp2e"), SubResource("Resource_dvkqq")])
+weapon_drop_chance = 0.3
+weapon_rarity_weights = Array[float]([10.0, 60.0, 30.0, 0.0])

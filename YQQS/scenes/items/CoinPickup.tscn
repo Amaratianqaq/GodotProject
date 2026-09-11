@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/items/coin_pickup.gd" id="1_coin"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_coin"]
+radius = 6.0
+
+[node name="CoinPickup" type="Area2D"]
+collision_layer = 256
+collision_mask = 0
+script = ExtResource("1_coin")
+amount = 1
+magnet_radius = 0.0
+collect_distance = 7.0
+pop_speed = 34.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_coin")

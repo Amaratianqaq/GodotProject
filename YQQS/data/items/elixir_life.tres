@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ConsumableData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/consumable_data.gd" id="1_xgwad"]
+
+[resource]
+script = ExtResource("1_xgwad")
+heal_amount = 999.0
+mp_amount = 999.0
+id = &"elixir_life"
+display_name = "生命精华"
+description = "同时回满生命与能量。BOSS 宝箱专属。"
+icon_sheet = "props"
+icon_cell = Vector2i(3, 3)
+item_type = 1
+rarity = 2
+max_stack = 9
+sell_price = 120
+tags = PackedStringArray()

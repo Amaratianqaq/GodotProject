@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/weapon_data.gd" id="1_ml5ti"]
+
+[resource]
+script = ExtResource("1_ml5ti")
+kind = 4
+fire_rate = 0.55
+bullet_speed = 205.0
+bullet_lifetime = 1.4
+knockback = 45.0
+crit_bonus = 0.02
+id = &"hunting_bow"
+display_name = "猎弓"
+description = "游侠的初始武器：朴素、可靠、射程不错。"
+item_type = 0
+sell_price = 14
+tags = PackedStringArray()

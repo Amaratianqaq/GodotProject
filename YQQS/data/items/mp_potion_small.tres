@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ConsumableData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/consumable_data.gd" id="1_0exgb"]
+
+[resource]
+script = ExtResource("1_0exgb")
+mp_amount = 30.0
+fx_color = Color(0.2901961, 0.56078434, 0.8509804, 1)
+id = &"mp_potion_small"
+display_name = "小能量药水"
+description = "回复 30 点能量。"
+icon_sheet = "props"
+icon_cell = Vector2i(4, 3)
+item_type = 1
+max_stack = 9
+sell_price = 8
+tags = PackedStringArray()

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/weapon_data.gd" id="1_bfn1e"]
+
+[resource]
+script = ExtResource("1_bfn1e")
+kind = 1
+damage = 13.0
+fire_rate = 0.36
+knockback = 80.0
+melee_arc_deg = 45.0
+melee_range = 34.0
+id = &"silver_spear"
+display_name = "银枪"
+description = "攻击距离最长的近战武器，适合卡位。"
+item_type = 0
+rarity = 2
+sell_price = 73
+tags = PackedStringArray()

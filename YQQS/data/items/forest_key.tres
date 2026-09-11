@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/item_data.gd" id="1_rfu38"]
+
+[resource]
+script = ExtResource("1_rfu38")
+id = &"forest_key"
+display_name = "森林钥匙"
+description = "可以打开森林中上锁的宝箱（第二阶段实装）。"
+icon_sheet = "props"
+icon_cell = Vector2i(2, 2)
+rarity = 2
+max_stack = 9
+sell_price = 30
+tags = PackedStringArray()

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/weapon_data.gd" id="1_tidwb"]
+
+[resource]
+script = ExtResource("1_tidwb")
+kind = 1
+damage = 22.0
+fire_rate = 0.42
+knockback = 95.0
+melee_arc_deg = 105.0
+melee_range = 27.0
+id = &"flame_brand"
+display_name = "烈焰之刃"
+description = "剑刃永远在燃烧，挥动时会拖出火光。"
+item_type = 0
+rarity = 3
+sell_price = 172
+tags = PackedStringArray()

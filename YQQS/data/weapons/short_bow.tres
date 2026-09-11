@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/weapon_data.gd" id="1_8csv1"]
+
+[resource]
+script = ExtResource("1_8csv1")
+kind = 4
+damage = 7.0
+fire_rate = 0.44
+bullet_speed = 235.0
+bullet_lifetime = 1.3
+knockback = 45.0
+crit_bonus = 0.02
+id = &"short_bow"
+display_name = "短弓"
+description = "拉弓更快，适合边跑边打。"
+item_type = 0
+rarity = 1
+sell_price = 32
+tags = PackedStringArray()

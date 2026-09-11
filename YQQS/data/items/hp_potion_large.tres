@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ConsumableData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/consumable_data.gd" id="1_gbu8p"]
+
+[resource]
+script = ExtResource("1_gbu8p")
+heal_amount = 65.0
+id = &"hp_potion_large"
+display_name = "大治疗药水"
+description = "回复 65 点生命。瓶身更厚的浓缩配方。"
+icon_sheet = "props"
+icon_cell = Vector2i(3, 3)
+item_type = 1
+rarity = 1
+max_stack = 9
+sell_price = 22
+tags = PackedStringArray()

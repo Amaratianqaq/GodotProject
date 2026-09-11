@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/weapon_data.gd" id="1_56wbs"]
+
+[resource]
+script = ExtResource("1_56wbs")
+damage = 11.0
+magazine = 12
+reload_time = 1.6
+projectile_count = 3
+spread_deg = 14.0
+bullet_speed = 300.0
+bullet_lifetime = 1.4
+knockback = 30.0
+id = &"storm_crossbow"
+display_name = "风暴弩"
+description = "一次射出三支带电的弩矢。"
+item_type = 0
+rarity = 3
+sell_price = 161
+tags = PackedStringArray()

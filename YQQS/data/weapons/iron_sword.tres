@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/weapon_data.gd" id="1_6bull"]
+
+[resource]
+script = ExtResource("1_6bull")
+kind = 1
+damage = 5.0
+fire_rate = 0.38
+knockback = 80.0
+melee_arc_deg = 95.0
+melee_range = 23.0
+id = &"iron_sword"
+display_name = "铁剑"
+description = "森林冒险者的第一把剑。"
+item_type = 0
+sell_price = 15
+tags = PackedStringArray()

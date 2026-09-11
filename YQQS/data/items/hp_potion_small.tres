@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ConsumableData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/consumable_data.gd" id="1_7472f"]
+
+[resource]
+script = ExtResource("1_7472f")
+heal_amount = 25.0
+id = &"hp_potion_small"
+display_name = "小治疗药水"
+description = "回复 25 点生命。森林里最常见的补给。"
+icon_sheet = "props"
+icon_cell = Vector2i(3, 3)
+item_type = 1
+max_stack = 9
+sell_price = 8
+tags = PackedStringArray()

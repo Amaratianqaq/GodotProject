@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/projectile_data.gd" id="1_ebf8j"]
+[ext_resource type="Script" path="res://scripts/data/weapon_data.gd" id="2_pcdhm"]
+
+[sub_resource type="Resource" id="Resource_241qv"]
+script = ExtResource("1_ebf8j")
+id = &"mithril_bow_arrow"
+speed = 260.0
+lifetime = 1.6
+pierce = 2
+pierce_damage_keep = 0.85
+color = Color(0.7882353, 0.9098039, 0.5411765, 1)
+trail_length = 4
+
+[resource]
+script = ExtResource("2_pcdhm")
+kind = 4
+damage = 12.0
+fire_rate = 0.4
+bullet_speed = 260.0
+bullet_lifetime = 1.6
+knockback = 45.0
+crit_bonus = 0.02
+projectile_data = SubResource("Resource_241qv")
+id = &"mithril_bow"
+display_name = "秘银弓"
+description = "秘银弓臂轻若无物，箭矢可以穿透两个目标。"
+item_type = 0
+rarity = 2
+sell_price = 72
+tags = PackedStringArray()

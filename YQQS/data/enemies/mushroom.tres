@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/enemy_data.gd" id="1_5lnu6"]
+
+[resource]
+script = ExtResource("1_5lnu6")
+id = &"mushroom"
+display_name = "蘑菇怪"
+description = "孢子鼓鼓囊囊，跳得很重。"
+sheet_key = "mushroom"
+body_radius = 6.5
+max_hp = 26.0
+move_speed = 26.0
+contact_damage = 5.0
+behavior = &"hopper"
+detect_radius = 140.0
+lose_radius = 308.0
+attack_range = 22.0
+projectile_speed = 140.0
+gold_min = 2
+chest_drop_chance = 0.35
+sfx_hurt = "res://assets/audio/sfx/hurt.wav"
+sfx_attack = "res://assets/audio/sfx/enemy_attack.wav"
+sfx_die = "res://assets/audio/sfx/enemy_die.wav"

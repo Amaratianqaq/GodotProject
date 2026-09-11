@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ConsumableData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/consumable_data.gd" id="1_58bjd"]
+
+[resource]
+script = ExtResource("1_58bjd")
+mp_amount = 75.0
+fx_color = Color(0.2901961, 0.56078434, 0.8509804, 1)
+id = &"mp_potion_large"
+display_name = "大能量药水"
+description = "回复 75 点能量。"
+icon_sheet = "props"
+icon_cell = Vector2i(4, 3)
+item_type = 1
+rarity = 1
+max_stack = 9
+sell_price = 22
+tags = PackedStringArray()

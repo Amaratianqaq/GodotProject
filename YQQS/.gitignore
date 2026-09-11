@@ -1,0 +1,22 @@
+# Godot 4 生成物
+.godot/
+/android/
+export_presets.cfg
+*.translation
+
+# 构建/导出
+/build/
+/export/
+*.pck
+*.zip
+
+# IDE
+/.vscode/
+/.idea/
+*.swp
+*.swo
+
+# 系统
+Thumbs.db
+desktop.ini
+.DS_Store

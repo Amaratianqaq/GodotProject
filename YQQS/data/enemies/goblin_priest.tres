@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/enemy_data.gd" id="1_3f7cl"]
+
+[resource]
+script = ExtResource("1_3f7cl")
+id = &"goblin_priest"
+display_name = "哥布林大祭司"
+description = "森林深处的统治者。会扇形齐射、环形弹幕，并召唤哥布林援军。"
+sheet_key = "goblin_priest"
+body_radius = 14.0
+tier = 2
+loot_table_id = &"enemy_boss"
+max_hp = 900.0
+armor = 60.0
+damage_reduction = 0.12
+move_speed = 36.0
+contact_damage = 0.0
+attack_damage = 15.0
+behavior = &"boss_summoner"
+detect_radius = 320.0
+lose_radius = 704.0
+attack_range = 130.0
+attack_cooldown = 1.9
+attack_windup = 0.75
+attack_recover = 0.55
+projectile_speed = 135.0
+projectile_count = 5
+projectile_spread_deg = 46.0
+burst_count = 3
+burst_interval = 0.22
+xp_reward = 400
+gold_min = 60
+gold_max = 120
+sfx_hurt = "res://assets/audio/sfx/hurt.wav"
+sfx_attack = "res://assets/audio/sfx/enemy_attack.wav"
+sfx_die = "res://assets/audio/sfx/enemy_die.wav"

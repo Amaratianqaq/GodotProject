@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/weapon_data.gd" id="1_kg5w1"]
+
+[resource]
+script = ExtResource("1_kg5w1")
+kind = 1
+damage = 9.0
+fire_rate = 0.34
+knockback = 80.0
+melee_arc_deg = 95.0
+melee_range = 23.0
+id = &"fine_blade"
+display_name = "精铁长剑"
+description = "锻造工艺明显好过一个档次的剑。"
+item_type = 0
+rarity = 1
+sell_price = 34
+tags = PackedStringArray()

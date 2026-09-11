@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="LootTable" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/loot_entry.gd" id="1_dgqme"]
+[ext_resource type="Script" path="res://scripts/data/loot_table.gd" id="2_r0iyv"]
+
+[sub_resource type="Resource" id="Resource_l2vxo"]
+script = ExtResource("1_dgqme")
+item_id = &"relic_shard"
+weight = 30.0
+count_max = 3
+require_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_h7dcy"]
+script = ExtResource("1_dgqme")
+item_id = &"hp_potion_large"
+weight = 26.0
+count_max = 2
+require_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_qs4dj"]
+script = ExtResource("1_dgqme")
+item_id = &"mp_potion_large"
+weight = 22.0
+count_max = 2
+require_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_miuh8"]
+script = ExtResource("1_dgqme")
+item_id = &"elixir_life"
+weight = 12.0
+require_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_kqhd3"]
+script = ExtResource("1_dgqme")
+item_id = &"forest_key"
+weight = 10.0
+require_tags = PackedStringArray()
+
+[resource]
+script = ExtResource("2_r0iyv")
+id = &"enemy_boss"
+display_name = "BOSS 掉落"
+roll_count = 4
+min_results = 4
+entries = Array[ExtResource("1_dgqme")]([SubResource("Resource_l2vxo"), SubResource("Resource_h7dcy"), SubResource("Resource_qs4dj"), SubResource("Resource_miuh8"), SubResource("Resource_kqhd3")])
+gold_min = 40
+gold_max = 80
+weapon_drop_chance = 1.0
+weapon_count_range = Vector2i(1, 2)
+weapon_rarity_weights = Array[float]([0.0, 0.0, 85.0, 15.0])

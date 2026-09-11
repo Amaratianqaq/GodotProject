@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/item_data.gd" id="1_vi02i"]
+
+[resource]
+script = ExtResource("1_vi02i")
+id = &"relic_shard"
+display_name = "遗迹碎片"
+description = "刻着古老纹路的碎片，来自森林深处的祭坛。"
+icon_sheet = "props"
+icon_cell = Vector2i(1, 7)
+rarity = 2
+max_stack = 99
+sell_price = 25
+tags = PackedStringArray()

@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/enemy_data.gd" id="1_afbgk"]
+
+[resource]
+script = ExtResource("1_afbgk")
+id = &"goblin_chief"
+display_name = "哥布林督军"
+description = "比普通哥布林壮一圈的督军，皮肤泛着暗红。"
+sheet_key = "goblin"
+sprite_scale = 1.35
+sprite_modulate = Color(0.78, 0.62, 0.62, 1)
+tier = 1
+loot_table_id = &"enemy_elite"
+max_hp = 95.0
+armor = 12.0
+move_speed = 50.0
+contact_damage = 0.0
+attack_damage = 11.0
+behavior = &"charger"
+detect_radius = 210.0
+lose_radius = 462.00000000000006
+attack_range = 22.0
+projectile_speed = 140.0
+charge_windup = 0.4
+xp_reward = 40
+gold_min = 8
+gold_max = 16
+sfx_hurt = "res://assets/audio/sfx/hurt.wav"
+sfx_attack = "res://assets/audio/sfx/enemy_attack.wav"
+sfx_die = "res://assets/audio/sfx/enemy_die.wav"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ProjectileData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/projectile_data.gd" id="1_rac76"]
+
+[resource]
+script = ExtResource("1_rac76")
+id = &"bullet_basic"
+speed = 280.0
+lifetime = 1.4
+trail_length = 4
+trail_color = Color(1, 0.827451, 0.36078432, 1)

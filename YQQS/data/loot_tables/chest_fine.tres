@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="LootTable" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/loot_entry.gd" id="1_42nix"]
+[ext_resource type="Script" path="res://scripts/data/loot_table.gd" id="2_oanrh"]
+
+[sub_resource type="Resource" id="Resource_vxc4g"]
+script = ExtResource("1_42nix")
+item_id = &"hp_potion_large"
+weight = 30.0
+require_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_a6ro6"]
+script = ExtResource("1_42nix")
+item_id = &"mp_potion_large"
+weight = 24.0
+require_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_q5moy"]
+script = ExtResource("1_42nix")
+item_id = &"goblin_fang"
+weight = 30.0
+count_max = 2
+require_tags = PackedStringArray()
+
+[sub_resource type="Resource" id="Resource_xeiis"]
+script = ExtResource("1_42nix")
+item_id = &"ancient_scroll"
+weight = 16.0
+require_tags = PackedStringArray()
+
+[resource]
+script = ExtResource("2_oanrh")
+id = &"chest_fine"
+display_name = "优秀宝箱"
+roll_count = 2
+empty_weight = 4.0
+min_results = 2
+max_results = 5
+entries = Array[ExtResource("1_42nix")]([SubResource("Resource_vxc4g"), SubResource("Resource_a6ro6"), SubResource("Resource_q5moy"), SubResource("Resource_xeiis")])
+gold_min = 15
+gold_max = 35
+weapon_drop_chance = 1.0
+weapon_rarity_weights = Array[float]([0.0, 45.0, 45.0, 10.0])
+extra_weapon_chance = 0.35

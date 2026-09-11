@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/character_data.gd" id="1_t8hp0"]
+
+[resource]
+script = ExtResource("1_t8hp0")
+description = "参考《元气骑士》游侠设计的机动型射手。
+生命与护甲偏低，但拥有全游戏最高的基础暴击率，
+以及独一无二的「翻滚」：翻滚期间无敌，结束后短时间内下一次攻击必定暴击。
+玩法核心是贴身输出 → 翻滚穿身位 → 暴击爆发。"
+skill_description = "向移动方向翻滚一段距离，翻滚期间完全无敌；
+翻滚结束后 0.65 秒内，下一次攻击必定暴击。
+冷却 1.2 秒，不消耗能量。"
+start_weapon_id = &"hunting_bow"
+start_items = Array[StringName]([&"hp_potion_small", &"mp_potion_small"])

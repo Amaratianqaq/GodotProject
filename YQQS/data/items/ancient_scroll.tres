@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/item_data.gd" id="1_pexnn"]
+
+[resource]
+script = ExtResource("1_pexnn")
+id = &"ancient_scroll"
+display_name = "古老卷轴"
+description = "记载着森林传说的卷轴，可以卖个好价钱。"
+icon_sheet = "props"
+icon_cell = Vector2i(5, 3)
+rarity = 1
+max_stack = 99
+sell_price = 12
+tags = PackedStringArray()
